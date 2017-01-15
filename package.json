@@ -1,0 +1,22 @@
+{
+  "name": "poc-vuejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/QLevaslot/poc-vuejs.git",
+  "author": "qlevaslot <quentin.levaslot@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"live-server --port=3000\" \"webpack -w\" "
+  },
+  "dependencies": {
+    "vue": "^2.1.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "concurrently": "^3.1.0",
+    "live-server": "^1.2.0",
+    "webpack": "^1.14.0"
+  }
+}

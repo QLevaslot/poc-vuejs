@@ -1,0 +1,9 @@
+# IntelliJ files
+.idea
+*.iml
+
+# Ignore generated project files
+node_modules
+bundle.js
+*.log
+
