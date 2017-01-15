@@ -1,9 +1,22 @@
 import Vue from 'vue';
-import AppComponent from './components/app-component/app-component';
+import HeroItem from './components/hero-item/hero-item';
 
 new Vue({
   el: '#app',
   components: {
-    'app-component': AppComponent
-  }
+    'hero-item': HeroItem
+  },
+  data: {
+    heroes: [
+      { name: 'Mr. Nice' },
+      { name: 'Narco' },
+      { name: 'Bombasto' },
+      { name: 'Celeritas' },
+      { name: 'Magneta' },
+      { name: 'RubberMan' },
+      { name: 'Dynama' },
+      { name: 'Dr IQ' },
+      { name: 'Magma' },
+      { name: 'Tornado' }]
+  },
 });

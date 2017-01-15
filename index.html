@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vue Twitter Streaming</title>
+    <title>Vue Hero List</title>
   </head>
   <body>
     <div id="app">
-      <app-component></app-component>
+        <hero-item v-for="hero in heroes" v-bind:hero="hero"></hero-item>
     </div>
     <script src="bundle.js"></script>
   </body>
