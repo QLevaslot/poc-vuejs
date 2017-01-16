@@ -3,9 +3,9 @@ import Vue from 'vue';
 const HeroInput = Vue.extend({
   props: ['name'],
   template: `
-  <div>
-    <p>Hello {{ name | capitalize }}</p>
-  </div>
+    <div>
+      <p>Hello {{ name | capitalize }}</p>
+    </div>
   `,
   filters: {
     capitalize: (value) => {
