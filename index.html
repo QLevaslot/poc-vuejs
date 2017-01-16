@@ -5,7 +5,26 @@
   </head>
   <body>
     <div id="app">
-        <hero-item v-for="hero in heroes" v-bind:hero="hero"></hero-item>
+        <div class="new-hero">
+          <p>Input a new hero name here please</p>
+          <input 
+            autofocus
+            autocomplete="off"
+            placeholder="Input a new hero name here"
+            v-model="newHeroName"
+            @keyup.enter="addHero"
+            @blur="reverseHero"
+          > 
+        </div>
+        <hero-detail 
+          v-if="newHeroName"
+          :name="newHeroName"
+        ></hero-detail>
+        <hero-item 
+          v-for="hero in reversedHeroes" 
+          :hero="hero"
+          :key="hero"
+        ></hero-item>
     </div>
     <script src="bundle.js"></script>
   </body>

@@ -6,7 +6,7 @@
   "author": "qlevaslot <quentin.levaslot@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"live-server --port=3000\" \"webpack -w\" "
+    "start": "concurrently \"live-server --port=3010\" \"webpack -w\" "
   },
   "dependencies": {
     "vue": "^2.1.8"
