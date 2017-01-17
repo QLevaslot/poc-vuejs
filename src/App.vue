@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png"><br/>
     <input 
+      id="hero-input"
       autofocus 
       autocomplete="off" 
       placeholder="Input a new hero name here" 

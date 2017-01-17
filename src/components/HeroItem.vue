@@ -1,6 +1,6 @@
 <template>
   <transition name="hero-item-transition">
-    <li>{{ hero.name }}</h1>
+    <li class="hero-item">{{ hero.name }}</h1>
   </transition>
 </template>
 
