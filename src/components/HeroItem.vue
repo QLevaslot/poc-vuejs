@@ -6,6 +6,9 @@
 
 <script>
   export default {
+    created() {
+      // I'm not sure what i want to do here yet.
+    },
     props: ['hero'],
   };
 </script>

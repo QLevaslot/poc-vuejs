@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png"><br/>
     <input 
       autofocus 
       autocomplete="off" 
@@ -9,7 +9,9 @@
       @keyup.enter="addHero"
       @blur="resetHeroInput"
     >
-    <hero-item v-for="hero in heroes" :hero="hero" :key="hero"></hero-item>
+    <ul>
+      <hero-item v-for="hero in heroes" :hero="hero" :key="hero"></hero-item>
+    </ul>
   </div>
 </template>
 
@@ -23,19 +25,14 @@
     },
     data() {
       return {
-        heroes: [
-          { name: 'Mr. Nice' },
-          { name: 'Narco' },
-          { name: 'Bombasto' },
-          { name: 'Celeritas' },
-          { name: 'Magneta' },
-          { name: 'RubberMan' },
-          { name: 'Dynama' },
-          { name: 'Dr IQ' },
-          { name: 'Magma' },
-          { name: 'Tornado' }],
         newHeroName: '',
       };
+    },
+    computed: {
+      // computed properties cache results and only update based on their dependencies
+      heroes() {
+        return this.$store.state.heroes;
+      },
     },
     methods: {
       // no dom manipulation in here
@@ -46,9 +43,7 @@
         if (!this.newHeroName.trim()) {
           return;
         }
-        this.heroes.push({
-          name: this.newHeroName,
-        });
+        this.$store.commit('addHero', { name: this.newHeroName });
         this.newHeroName = '';
       },
       resetHeroInput() {
