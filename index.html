@@ -1,32 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vue Hero List</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <meta charset="utf-8">
+    <title>poc-vuejs</title>
   </head>
   <body>
-    <div id="app">
-        <div class="new-hero">
-          <p>Input a new hero name here please</p>
-          <input 
-            autofocus
-            autocomplete="off"
-            placeholder="Input a new hero name here"
-            v-model="newHeroName"
-            @keyup.enter="addHero"
-            @blur="reverseHero"
-          > 
-        </div>
-        <hero-detail 
-          v-if="newHeroName"
-          :name="newHeroName"
-        ></hero-detail>
-        <hero-item 
-          v-for="hero in reversedHeroes" 
-          :hero="hero"
-          :key="hero"
-        ></hero-item>
-    </div>
-    <script src="bundle.js"></script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
 </html>
